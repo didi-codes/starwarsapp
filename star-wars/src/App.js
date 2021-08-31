@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Character from './components/Character';
-// import Logo from './assets/logo.png'
+import Logo from './assets/bb8.png'
 import axios from 'axios';
 import { CardImg } from 'reactstrap';
 import './App.css';
@@ -23,9 +23,10 @@ const App = () => {
   return (
     <div className='App'>
       <div className='logo'>
-        <CardImg></CardImg>
+        <CardImg src={Logo} style={{width: '200px'}} />
+        <h1 className='header'>Star Wars Folks</h1>
       </div>
-      <h1 className='header'>Star Wars Folks</h1>
+      
       {characters.map((character) => {
         return (
           <Character
